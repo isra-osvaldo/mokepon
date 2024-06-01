@@ -18,8 +18,8 @@ function seleccionarMascotaJugador() {
     } else {
         alert('Selecciona una mascota')
     }
-
-    seleccionarMascotaEnenmigo()
+    // Luego que el jugador elige una mascota, el enemigo automáticamente elegirá su mascota 
+    seleccionarMascotaEnenmigo() // Invocando la función 
 }   
 
 
