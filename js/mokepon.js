@@ -85,7 +85,7 @@ function ataqueAleatorioEnemigo() {
 function combate() {
     if (ataqueJugador == ataqueEnemigo) {
         crearMensaje('EMPATE') // Invocando función crearMensaje()
-    } else if (ataqueJugador == 'Fuego' && ataqueEnemigo == 'Tierra') {
+    } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA') {
         crearMensaje('GANASTE')
     } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
         crearMensaje('GANASTE')
