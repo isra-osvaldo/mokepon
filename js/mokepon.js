@@ -55,15 +55,15 @@ function seleccionarMascotaEnenmigo() {
 // Preparando Ataques 
 // Cuando el jugador selccione su ataque automáticamente y de forma aleatoria se asignará un ataque al enemigo
 function ataqueFuego() {
-    ataqueJugador = 'Fuego'
+    ataqueJugador = 'FUEGO'
     ataqueAleatorioEnemigo()
 }
 function ataqueAgua() {
-    ataqueJugador = 'Agua'
+    ataqueJugador = 'AGUA'
     ataqueAleatorioEnemigo()
 }
 function ataqueTierra() {
-    ataqueJugador = 'Tierra'
+    ataqueJugador = 'TIERRA'
     ataqueAleatorioEnemigo()
 }
 
@@ -72,24 +72,37 @@ function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(1,3)
     
     if (ataqueAleatorio == 1) {
-        ataqueEnemigo = 'Fuego 🔥'
+        ataqueEnemigo = 'FUEGO'
     } else if (ataqueAleatorio == 2) {
-        ataqueEnemigo = 'Agua 💧'
+        ataqueEnemigo = 'AGUA'
     } else {
-        ataqueEnemigo = 'Tierra 🌱'
+        ataqueEnemigo = 'TIERRA'
     }
 
-    crearMensaje()
+    combate()
 }
 
-function crearMensaje() {
+function combate() {
+    if (ataqueJugador == ataqueEnemigo) {
+        crearMensaje('EMPATE') // Invocando función crearMensaje()
+    } else if (ataqueJugador == 'Fuego' && ataqueEnemigo == 'Tierra') {
+        crearMensaje('GANASTE')
+    } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO') {
+        crearMensaje('GANASTE')
+    } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA') {
+        crearMensaje('GANASTE')
+    } else {
+        crearMensaje('PERDISTE')
+    }
+}
+
+function crearMensaje(resultado) {
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')
-    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo} - PENDIENTE`
+    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo} - ${resultado}`
 
     sectionMensajes.appendChild(parrafo)
 }
-
 
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
