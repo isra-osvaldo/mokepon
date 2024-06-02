@@ -53,6 +53,7 @@ function seleccionarMascotaEnenmigo() {
 }
 
 // Preparando Ataques 
+// Cuando el jugador selccione su ataque automáticamente y de forma aleatoria se asignará un ataque al enemigo
 function ataqueFuego() {
     ataqueJugador = 'Fuego'
     ataqueAleatorioEnemigo()
@@ -77,6 +78,16 @@ function ataqueAleatorioEnemigo() {
     } else {
         ataqueEnemigo = 'Tierra 🌱'
     }
+
+    crearMensaje()
+}
+
+function crearMensaje() {
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = `Tu mascota atacó con ${ataqueJugador}, la mascota del enemigo atacó con ${ataqueEnemigo} - PENDIENTE`
+
+    sectionMensajes.appendChild(parrafo)
 }
 
 
