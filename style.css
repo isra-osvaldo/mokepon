@@ -69,4 +69,17 @@ input {
     display: none;
 }
 
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
 
+.btn-de-ataque {
+    background-color: #F6DCAC;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 120px;
+    font-family: "Poppins", sans-serif; 
+    font-weight:500;
+}
