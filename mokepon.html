@@ -4,27 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokepón</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./js/mokepon.js"></script>
 </head>
 <body>
-    <h1>MOKEPÓN 🔥💧🌱</h1>
-
     <section id="seleccionar-mascota">
-        <h2>Elige a tu mascota:</h2>
+        <h1 class="titulo">Mokepón</h1>  
+        <h2 class="subtitulo">Elige tu mascota:</h2>
 
-        <input type="radio" name="mascota" id="hipodoge">
-        <label for="hipodoge">Hipodoge</label>
+        <div class="tarjetas">
+            <input type="radio" name="mascota" id="hipodoge">
+            <label class="tarjeta-de-mokepon" for="hipodoge">
+                <p>Hipodoge</p>
+                <img src="./assets/hipodoge.png" alt="Hipodoge">
+            </label>
 
-        <input type="radio" name="mascota" id="capipepo">
-        <label for="capipepo">Capipepo</label>
+            <input type="radio" name="mascota" id="capipepo">
+            <label class="tarjeta-de-mokepon" for="capipepo">
+                <p>Capipepo</p>
+                <img src="./assets/capipepo.png" alt="Capipepo">
+            </label>
 
-        <input type="radio" name="mascota" id="ratigueya">
-        <label for="ratigueya">Ratigueya</label>
+            <input type="radio" name="mascota" id="ratigueya">
+            <label class="tarjeta-de-mokepon" for="ratigueya">
+                <p>Ratigueya</p>
+                <img src="./assets/ratigueya.png" alt="Ratigueya">
+            </label>
+        </div>
 
-        <button id="boton-mascota">Seleccionar</button>
+        <button id="boton-mascota" class="btn-select-mascota">Seleccionar</button>
     </section>
     
     <section id="seleccionar-ataque">
+        <h1 class="titulo">MOKEPÓN 🔥💧🌱</h1> 
         <h2>Elige tu ataque:</h2>
 
         <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
@@ -42,7 +54,7 @@
     </section>
 
     <section id="reiniciar">
-        <button id="boton-reiniciar">Reiniciar</button>
+        <button id="boton-reiniciar" class="btn-reiniciar">Reiniciar</button>
     </section>
 
 </body>
