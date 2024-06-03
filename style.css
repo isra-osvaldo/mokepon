@@ -35,8 +35,9 @@ body {
     color: #3D3B40;
 }
 
-.tarjetas{
-    display: flex;
+.tarjetas,
+.tarjetas-ataques {
+    display: flex; /* Coloca tarjetas una al lado de la otra*/
     gap: 10px;
 }
 
@@ -122,4 +123,21 @@ input {
 .ataques {
     display: grid;
     grid-template-columns: 100px 100px;
+}
+
+
+/* Media Query*/
+@media (max-width: 800px) { 
+    .tarjetas,
+    .tarjetas-ataques {
+        flex-direction: column;
+    }
+
+    .titulo {
+        font-size: 60px;
+    }
+    
+    .subtitulo {
+        font-size: 30px ;
+    }
 }
