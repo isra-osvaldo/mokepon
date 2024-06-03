@@ -93,7 +93,28 @@ input {
     padding: 10px;
     box-sizing: border-box;
     border-radius: 20px;
-    width: 120px;
+    width: 170px;
     font-family: "Poppins", sans-serif; 
     font-weight:500;
+}
+
+#mensajes {
+    width: 350px;
+    background-color: #3C5B6F;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+
+}
+
+#boton-reiniciar {
+    border: transparent;
+    border-radius: 10px;
+    width: 100px;
+    color: #3C5B6F;
+    font-family: "Poppins", sans-serif; 
 }
