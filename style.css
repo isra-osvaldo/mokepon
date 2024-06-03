@@ -52,6 +52,13 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 16px;
+    transition: transform 0.3s, box-shadow 0.9s;
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+.tarjeta-de-mokepon:active, .btn-select-mascota:active {
+    transform: scale(0.96); /* Disminuye ligeramente el tamaño */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); /* Cambia la sombra */
 }
 
 .tarjeta-de-mokepon img {
@@ -68,6 +75,8 @@ body {
     font-weight: 400;
     font-style: normal;
     margin-top: 30px;
+    transition: transform 0.3s, box-shadow 0.9s;
+    cursor: pointer; /* Cambia el cursor a una mano */
 }
 
 input {
