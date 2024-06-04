@@ -24,6 +24,7 @@ body {
     font-family: 'Pokemon Hollow', sans-serif;
     font-size: 80px;
     box-sizing:content-box;
+    margin-bottom: 20px;
 
 }
 
@@ -127,7 +128,7 @@ input {
 
 
 /* Media Query*/
-@media (max-width: 800px) { 
+@media (max-width: 800px) {  
     .tarjetas,
     .tarjetas-ataques {
         flex-direction: column;

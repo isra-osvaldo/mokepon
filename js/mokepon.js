@@ -30,16 +30,16 @@ function iniciarJuego() {
 
 // Seleccionar mascota del jugador
 function seleccionarMascotaJugador() {
-    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
+    const  sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
     sectionSeleccionarMascota.style.display = 'none' // Ocultar section 
 
-    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    const sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     sectionSeleccionarAtaque.style.display = 'flex'
 
-    let inputHipodoge = document.getElementById('hipodoge')
-    let inputCapipepo = document.getElementById('capipepo')
-    let inputRatigueya = document.getElementById('ratigueya')
-    let spanMascotaJugador = document.getElementById('mascota-jugador')
+    const inputHipodoge = document.getElementById('hipodoge')
+    const inputCapipepo = document.getElementById('capipepo')
+    const inputRatigueya = document.getElementById('ratigueya')
+    const spanMascotaJugador = document.getElementById('mascota-jugador')
 
     if(inputHipodoge.checked) {
         spanMascotaJugador.innerHTML = 'Hipodoge'
@@ -56,8 +56,8 @@ function seleccionarMascotaJugador() {
 
 // Seleccionar mascota enemigo de manera aleatoria
 function seleccionarMascotaEnenmigo() {
-    let mascotaAleaotoria = aleatorio(1,3)
-    let spanMascotaEnemigo = document.getElementById('mascota-enemigo')
+    const mascotaAleaotoria = aleatorio(1,3)
+    const spanMascotaEnemigo = document.getElementById('mascota-enemigo')
 
     if (mascotaAleaotoria == 1) {
         spanMascotaEnemigo.innerHTML = 'Hipodoge'
@@ -85,7 +85,7 @@ function ataqueTierra() {
 
 // Ataques Enemigo
 function ataqueAleatorioEnemigo() {
-    let ataqueAleatorio = aleatorio(1,3)
+    const ataqueAleatorio = aleatorio(1,3)
     
     if (ataqueAleatorio == 1) {
         ataqueEnemigo = 'FUEGO'
@@ -99,8 +99,8 @@ function ataqueAleatorioEnemigo() {
 }
 
 function combate() {
-    let spanVidasJugador = document.getElementById('vidas-jugador')
-    let spanVidasEnemigo = document.getElementById('vidas-enemigo')
+    const spanVidasJugador = document.getElementById('vidas-jugador')
+    const spanVidasEnemigo = document.getElementById('vidas-enemigo')
 
     if (ataqueJugador == ataqueEnemigo) {
         crearMensaje('EMPATE') // Invocando función crearMensaje()
@@ -135,12 +135,12 @@ function revisarVidas() {
 }
 
 function crearMensaje(resultado) {
-    let sectionMensajes = document.getElementById('resultado')
-    let ataquesDelJugador = document.getElementById('ataques-del-jugador')
-    let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
+    const sectionMensajes = document.getElementById('resultado')
+    const ataquesDelJugador = document.getElementById('ataques-del-jugador')
+    const ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
 
-    let nuevoAtaqueDelJugador = document.createElement('p')
-    let nuevoAtaqueDelEnemigo = document.createElement('p')
+    const nuevoAtaqueDelJugador = document.createElement('p')
+    const nuevoAtaqueDelEnemigo = document.createElement('p')
 
     sectionMensajes.innerHTML = resultado
     nuevoAtaqueDelJugador.innerHTML = ataqueJugador
@@ -151,18 +151,18 @@ function crearMensaje(resultado) {
 }
 
 function crearMensajeFinal(resultadoFinal) {
-    let sectionMensajes = document.getElementById('resultado')
+    const sectionMensajes = document.getElementById('resultado')
     sectionMensajes.innerHTML = resultadoFinal
 
 
-    let botonFuego = document.getElementById('boton-fuego')
+    const botonFuego = document.getElementById('boton-fuego')
     botonFuego.disabled = true
-    let botonAgua = document.getElementById('boton-agua')
+    const botonAgua = document.getElementById('boton-agua')
     botonAgua.disabled = true
-    let botonTierra = document.getElementById('boton-tierra')
+    const botonTierra = document.getElementById('boton-tierra')
     botonTierra.disabled = true
 
-    let sectionReiniciar = document.getElementById('reiniciar')
+    const sectionReiniciar = document.getElementById('reiniciar')
     sectionReiniciar.style.display = 'block'
 
 }
