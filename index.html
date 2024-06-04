@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <!-- PRIMERA PANTALLA -->
+    <section id="seleccionar-mascota">
+      <h1 class="titulo">Mokepón</h1>
+      <h2 class="subtitulo">Elige tu mascota:</h2>
+
+      <div class="tarjetas">
+        <input type="radio" name="mascota" id="hipodoge" />
+        <label class="tarjeta-de-mokepon" for="hipodoge">
+          <p>Hipodoge</p>
+          <img src="./assets/hipodoge.png" alt="Hipodoge" />
+        </label>
+
+        <input type="radio" name="mascota" id="capipepo" />
+        <label class="tarjeta-de-mokepon" for="capipepo">
+          <p>Capipepo</p>
+          <img src="./assets/capipepo.png" alt="Capipepo" />
+        </label>
+
+        <input type="radio" name="mascota" id="ratigueya" />
+        <label class="tarjeta-de-mokepon" for="ratigueya">
+          <p>Ratigueya</p>
+          <img src="./assets/ratigueya.png" alt="Ratigueya" />
+        </label>
+      </div>
+
+      <button id="boton-mascota" class="btn-select-mascota">Seleccionar</button>
+    </section>
+
+    <!-- SEGUNDA PANTALLA -->
+    <section id="seleccionar-ataque">
+      <h1 class="titulo">Mokepón</h1>
+
+      <h2 class="subtitulo">Elige tu ataque:</h2>
+
+      <div class="tarjetas-ataques">
+        <button id="boton-fuego" class="btn-de-ataque">Fuego 🔥</button>
+        <button id="boton-agua" class="btn-de-ataque">Agua 💧</button>
+        <button id="boton-tierra" class="btn-de-ataque">Tierra 🌱</button>
+      </div>
+
+      <section id="mensajes">
+        <p id="resultado">¡Mucha suerte!</p>
+        <div id="reiniciar">
+          <button id="boton-reiniciar" class="btn-reiniciar">Reiniciar</button>
+        </div>
+      </section>
+
+      <div class="ataques">
+            <div>
+                <p id="vidas-jugador">3</p>
+                <p id="mascota-jugador"></p>
+                <div id="ataques-del-jugador"></div>
+            </div>
+            <div>   
+                <p id="vidas-enemigo">3</p>
+                <p id="mascota-enemigo"></p>
+                <div id="ataques-del-enemigo"></div>
+            </div>
+      </div>
+    </section>
+  </body>
+</html>
