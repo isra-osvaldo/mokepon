@@ -137,6 +137,11 @@ input:checked + label {
     align-items: center;
 }
 
+#vidas-jugador, #vidas-enemigo {
+    font-size: xx-large;
+    margin-bottom: -4px;
+}
+
 
 /* Media Query*/
 @media (max-width: 800px) {  
