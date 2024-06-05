@@ -31,10 +31,10 @@ function iniciarJuego() {
 // Seleccionar mascota del jugador
 function seleccionarMascotaJugador() {
     const  sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
-    sectionSeleccionarMascota.style.display = 'none' // Ocultar section 
+    
 
     const sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'flex'
+    
 
     const inputHipodoge = document.getElementById('hipodoge')
     const inputCapipepo = document.getElementById('capipepo')
@@ -42,10 +42,16 @@ function seleccionarMascotaJugador() {
     const spanMascotaJugador = document.getElementById('mascota-jugador')
 
     if(inputHipodoge.checked) {
+        sectionSeleccionarMascota.style.display = 'none' // Ocultar section 
+        sectionSeleccionarAtaque.style.display = 'flex'
         spanMascotaJugador.innerHTML = 'Hipodoge'
     } else if(inputCapipepo.checked) {
+        sectionSeleccionarMascota.style.display = 'none' // Ocultar section 
+        sectionSeleccionarAtaque.style.display = 'flex'
         spanMascotaJugador.innerHTML = 'Capipepo'
     } else if(inputRatigueya.checked) {
+        sectionSeleccionarMascota.style.display = 'none' // Ocultar section 
+        sectionSeleccionarAtaque.style.display = 'flex'
         spanMascotaJugador.innerHTML = 'Ratigueya'
     } else {
         alert('Selecciona una mascota')
